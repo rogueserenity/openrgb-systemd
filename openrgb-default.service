@@ -1,0 +1,12 @@
+[Unit]
+Description=Starts OpenRGB with the default profile located at /etc/openrgb/default.orp
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/usr/bin/openrgb --server --mode direct --color 640064
+
+[Install]
+WantedBy=multi-user.target
